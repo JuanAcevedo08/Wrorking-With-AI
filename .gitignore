@@ -1,0 +1,14 @@
+# Archivos del sistema (Windows/macOS)
+.DS_Store
+Thumbs.db
+
+# Archivos temporales de editores de código
+.vscode/
+.idea/
+*.log
+
+# Caché de navegadores y servidores locales
+node_modules/
+dist/
+
+*.tmp
