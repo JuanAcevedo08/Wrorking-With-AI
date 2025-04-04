@@ -123,3 +123,101 @@ a {
     color: inherit; /* Hereda el color del texto del contenedor */
     display: block; /* Hace que los enlaces se comporten como bloques */
 }
+
+/* Blog-specific styles /* Blog-specific styles */
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #000;
+    color: #ffd700;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+header nav .menu li {
+    display: inline;
+}
+
+header nav .menu a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+header nav .menu a:hover {
+    color: #ff9a00;
+}
+
+/* Blog container styles */
+/* Blog container styles */
+.blog-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.blog-container section {
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #ff9a00, #ffd700);
+    color: #333;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center; /* Centra el contenido dentro del contenedor */
+}
+
+.blog-container section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.blog-container h2 {
+    margin-top: 0;
+    font-size: 2rem; /* Aumenta el tamaño del título */
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.blog-container p {
+    color: #444;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    text-align: justify; /* Justifica el texto */
+    background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-container p:hover {
+    transform: scale(1.02); /* Efecto de zoom al pasar el cursor */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
