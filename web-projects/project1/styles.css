@@ -1,47 +1,125 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a00, #ff0055, #00c3ff, #ffd700);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 10px 0;
     text-align: center;
+    padding: 1.5rem 0;
+    background: #000;
+    color: #ffd700;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-h1 {
+header .logo h1 {
     margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem; /* Baja los contenedores */
 }
 
-footer {
-    background: #35424a;
-    color: #ffffff;
+/* Contenedor de la imagen */
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.image-container img {
+    max-width: 150px; /* Ajusta el tamaño de la imagen */
+    border-radius: 50%; /* Hace la imagen circular */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 3px solid #ffd700; /* Borde amarillo */
+}
+
+.section {
+    background: linear-gradient(135deg, #ffd700, #ff9a00);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
     text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 }
 
-.button {
-    display: inline-block;
-    font-size: 18px;
-    color: #ffffff;
-    background: #e8491d;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
+.section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #ff9a00, #ffd700);
+    color: #000;
 }
 
-.button:hover {
-    background: #333;
+.section h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilo para el footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #000;
+    color: #ffd700;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo específico para el enlace dentro del footer */
+footer a {
+    display: inline; /* Cambia el enlace a un elemento en línea */
+    color: #ffd700;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ff9a00;
+}
+
+/* Evitar que el enlace ocupe más espacio del necesario */
+footer p {
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Quitar estilos predeterminados de los enlaces */
+a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color del texto del contenedor */
+    display: block; /* Hace que los enlaces se comporten como bloques */
 }
