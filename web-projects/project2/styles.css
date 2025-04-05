@@ -1,33 +1,127 @@
+/* General styles */
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* Header styles */
 header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 10px 0;
+    background: #ff9a00; /* Fondo naranja */
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Main content styles */
+main {
+    flex: 1;
+    background: blue; /* Fondo amarillo */
+    padding: 2rem;
     text-align: center;
 }
 
-h1 {
-    margin: 0;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
+/* Footer styles */
 footer {
-    background: #35424a;
-    color: #ffffff;
+    background: #00c3ff; /* Fondo azul */
+    color: #fff;
     text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
+    padding: 1rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header, main, footer {
+        padding: 1rem;
+    }
+
+    main {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header, main, footer {
+        padding: 0.5rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+.father-content {
+    background-color: aquamarine; /* Fondo para identificar el contenedor principal */
     width: 100%;
+    height: 800px;
+    display: flex; /* Alinea los elementos hijos en fila */
+    flex-direction: column;
+    justify-content: space-around; /* Espaciado uniforme entre los elementos */
+    align-items: center;
+}
+
+
+/* Estilo para el contenedor de perfil */
+.content-perfile {
+    background-color: lightcoral; /* Fondo rojo claro */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Hace que sea circular */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Estilo para los otros contenedores */
+.content {
+    background-color: lightblue; /* Fondo azul claro */
+    width: 60%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+.content:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+/* Quitar estilos predeterminados de los enlaces */
+a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color del texto del contenedor */
+    transition: color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+/* Estilo moderno para los enlaces */
+a {
+    color: #007bff; /* Azul moderno */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1.1rem; /* Tamaño de fuente */
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    border: 2px solid #007bff; /* Borde azul */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: transparent; /* Fondo transparente */
+    display: inline-block; /* Hace que el enlace se comporte como un botón */
+    text-align: center; /* Centra el texto */
+    transition: all 0.3s ease; /* Transiciones suaves */
+}
+
+a:hover {
+    background-color: #007bff; /* Fondo azul al pasar el cursor */
+    color: #d41414; /* Texto blanco al pasar el cursor */
+    transform: scale(1.05); /* Efecto de zoom */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
