@@ -9,8 +9,10 @@ body {
 
 /* Header styles */
 header {
-    background: #ff9a00; /* Fondo naranja */
-    color: #fff;
+    background: transparent; /* Fondo naranja */
+    border-radius: 5;
+    border: solid black;
+    box-shadow: black, 10 ,10 ,10 , 10;
     text-align: center;
     padding: 1rem;
 }
